@@ -10,35 +10,16 @@ echo "Author: 	tim.ha"
 echo "Company: 	no company"				                        
 echo "--------------------------------------------"
 #---------------------------------------------------------------#
-#Set your privat-key
-myKey="/home/user/.ssh/id_rsa"
-#Set the name you wan´t to display
-possibleConnection=("server1" "server2" "etc....")
-#Colour of the outplut
-echo -e "\e[33mNumber	Server\e[0m"
-#Output of the remoteServer list
-for i in "${!possibleConnection[@]}"; do
-	printf "%s\t%s\n" "$i" "${possibleConnection[$i]}"
-done
+#Run selection
+echo $(jq '.[].serverName' servers.json)
 #Selection
 echo "--------------------------------------------"
-read -p 'Pelease choos a number: ' sshValue
-#Remote connections
-case "$sshValue" in
-	"0")
-		#Server 1
-		ssh user@X.X.X.X -i $myKey
-		;;
-	"1")
-		#Server 2
-		ssh user@X.X.X.X -i $myKey
-		;;
-	"2")
-		#etc.....
-		ssh user@X.X.X.X -i $myKey
-		;;
-	*)
-		#Error output
-		echo "ERROR: Your value does not match with the Numbers!"
-		;;
-esac
+read -p 'Pelease choos server: ' query
+#Return the choosed server data
+jsonQuery=$(jq -r --arg query "$query" '.[] | select(.serverName==$query)' servers.json)
+#Remove the " in the string of the query
+data="${jsonQuery//\"}"
+#Save the string in an array
+array=(${data//,/ })
+#Connect to a server
+ssh ${array[4]}@${array[6]} -p ${array[8]} -i ${array[10]}

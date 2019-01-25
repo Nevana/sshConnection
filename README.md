@@ -5,9 +5,9 @@
 
 * Notice that you have to run the commands with `sudo` if needed
 
-* Configure the file: `vim /your/path/to/file/sshConnection.sh`
+* Configure the file: `vim /your/path/to/file/servers.json`
 
-    * Change the variables `$myKey`, `$possibleConnections` and `user@X.X.X.X`
+    * Modify the arrays with your data or add new arrays
 
 * Set the user rights `chmod 775 /your/path/to/file/sshConnection.sh`
 
