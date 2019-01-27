@@ -1,7 +1,9 @@
 # SSH Connect
 * Easy ssh manager for shell
 # Installation 
-* Download the `sshConnection.sh` file!
+* Clone the repository to you client
+
+* Install the jq service `sudo apt install jq -y`
 
 * Notice that you have to run the commands with `sudo` if needed
 
