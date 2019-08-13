@@ -17,12 +17,16 @@ def printData(data):
 def checkInputNumber(number):
         if not number.isdigit():
                 sys.exit("Letters are not allowed!")
+#Get directory of exectued file
+def dirPath():
+        return os.path.dirname(os.path.realpath(__file__))
 
 #Start line
 print("Run sshConnection.py")
 print(getLine(), "\nNumber\tServer")
+jsonFile = f"{dirPath()}/servers.json"
 #Get json data
-with open('servers.json') as f:
+with open(jsonFile) as f:
         jsonData = json.load(f)
 #Call printData function
 printData(jsonData)
