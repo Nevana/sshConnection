@@ -1,24 +1,22 @@
 # SSH Connect
-* Easy ssh manager for shell
+* Easy python ssh manager
 # Installation 
 * Clone the repository to you client
-
-* Install the jq service `sudo apt install jq -y`
 
 * Notice that you have to run the commands with `sudo` if needed
 
 * Configure the file: `vim /your/path/to/file/servers.json`
 
-    * Modify the arrays with your data or add new arrays
+    * Modify the array with your data
 
-* Set the user rights `chmod 775 /your/path/to/file/sshConnection.sh`
+* Set the user rights `chmod 775 /your/path/to/file/sshConnection.py`
 
 * Execute the script:
 
     * Open the file `vim /home/user/.bashrc`
 
-    * Add line `alias sshConnection='/your/path/to/file/sshConnection.sh'`
+    * Add line `alias sshC='/your/path/to/file/sshConnection.py'`
     
     * Save the file and reload the .bashrc `source .bashrc`
     
-* Run `sshConnection` in the terminal
+* Run `sshC` in the terminal

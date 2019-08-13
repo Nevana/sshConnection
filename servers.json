@@ -1,23 +1,22 @@
-[
-    {
-        "serverName": "",                       
-        "userName": "",                         
-        "server": "",                           
-        "port": "22",                           
-        "keyPath": "/home/user/.ssh/id_rsa"     
+[{
+        "serverName": "",
+        "userName": "",
+        "server": "",
+        "port": "22",
+        "keyPath": "/home/user/.ssh/id_rsa"
     },
     {
-        "serverName": "",                       
-        "userName": "",                         
-        "server": "",                           
-        "port": "22",                           
-        "keyPath": "/home/user/.ssh/id_rsa"     
+        "serverName": "",
+        "userName": "",
+        "server": "",
+        "port": "22",
+        "keyPath": "/home/user/.ssh/id_rsa"
     },
     {
-        "serverName": "",                       
-        "userName": "",                         
-        "server": "",                           
-        "port": "22",                           
-        "keyPath": "/home/user/.ssh/id_rsa"     
+        "serverName": "",
+        "userName": "",
+        "server": "",
+        "port": "22",
+        "keyPath": "/home/user/.ssh/id_rsa"
     }
 ]
